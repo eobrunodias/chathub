@@ -4,7 +4,7 @@ import { User } from "./models/User"
 
 export const routes = express.Router()
 
-routes.get("/", async (req: Request, res: Response) => {
+routes.get("/", async (_req: Request, res: Response) => {
   res.json({ message: "Hello World" })
 })
 
@@ -26,7 +26,7 @@ routes.post("/users", async (req: Request, res: Response) => {
   }
 })
 
-routes.get("/topics", async (req: Request, res: Response) => {
+routes.get("/topics", async (_req: Request, res: Response) => {
   try {
     const topics = await Topic.find({}, "title")
     return res.json(topics)
