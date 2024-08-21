@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "module": "CommonJS",
+    "esModuleInterop": true,
+    "target": "ES6",
+    "outDir": "./dist"
+  },
+  "include": ["src/backend/**/*.ts"],
+  "exclude": ["node_modules"]
+}
