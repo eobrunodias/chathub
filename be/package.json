@@ -1,24 +1,24 @@
 {
-  "name": "websocket-backend",
-  "private": true,
-  "version": "0.0.0",
-  "type": "module",
+  "name": "be",
+  "version": "1.0.0",
   "scripts": {
-    "server": "ts-node-dev --project tsconfig.server.json src/backend/index.ts"
+    "server": "ts-node-dev --transpile-only src/server.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/express": "^4.17.21",
+    "@types/node": "^22.5.0",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.5.4"
   },
   "dependencies": {
     "cors": "^2.8.5",
     "dotenv": "^16.4.5",
     "express": "^4.19.2",
-    "mongoose": "^8.5.3",
-    "socket.io": "^4.7.5",
-    "socket.io-client": "^4.7.5",
-    "ts-node-dev": "^2.0.0"
-  },
-  "devDependencies": {
-    "@types/cors": "^2.8.17",
-    "@types/express": "^4.17.21",
-    "@types/node": "^20",
-    "typescript": "^5.5.3"
+    "mongoose": "^8.5.3"
   }
 }
