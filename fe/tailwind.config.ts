@@ -5,7 +5,7 @@ const config: Config = {
   theme: {
     extend: {
       minHeight: {
-        "screen-minus-header": "calc(100vh - 72px)",
+        "screen-minus-header": "calc(100vh - (72px + 56px))",
       },
       colors: {
         primary: "#3490dc",
