@@ -9,7 +9,7 @@ import {
 import { Topic } from "./Home"
 import io from "socket.io-client"
 import { User, UserContext } from "../App"
-import MessageBox from "./MessageBox"
+import { MessageBox } from "./MessageBox"
 
 import { PiKeyReturn } from "react-icons/pi"
 import { LuSendHorizonal } from "react-icons/lu"
@@ -28,7 +28,7 @@ export type Message = {
 
 const socket = io("ws://localhost:3000")
 
-export default function TopicRoom({ topic, setOpenTopic }: TopicRoomProps) {
+export function TopicRoom({ topic, setOpenTopic }: TopicRoomProps) {
   const { user } = useContext(UserContext)
   const [messages, setMessages] = useState<Message[]>([])
 

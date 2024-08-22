@@ -2,7 +2,7 @@ import { FormEvent, useContext } from "react"
 import { UserContext } from "../App"
 import { IoEnterOutline } from "react-icons/io5"
 
-export default function Login() {
+export function Login() {
   const { login } = useContext(UserContext)
 
   async function handleSubmit(ev: FormEvent<HTMLFormElement>) {

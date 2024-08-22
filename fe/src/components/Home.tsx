@@ -1,17 +1,17 @@
 import { FormEvent, useContext, useEffect, useState } from "react"
 import { UserContext } from "../App"
-import TopicRoom from "./TopicRoom"
-import TopicsList from "./TopicsList"
+import { TopicRoom } from "./TopicRoom"
+import { TopicsList } from "./TopicsList"
 
-import { IoMdCreate } from "react-icons/io"
 import { PiKeyReturn } from "react-icons/pi"
+import { FaRegCaretSquareRight } from "react-icons/fa"
 
 export type Topic = {
   _id: string
   title: string
 }
 
-export default function Home() {
+export function Home() {
   const { user, logout } = useContext(UserContext)
   const [topics, setTopics] = useState<Topic[]>([])
   const [openTopic, setOpenTopic] = useState<Topic | null>(null)
@@ -47,7 +47,7 @@ export default function Home() {
     return <TopicRoom topic={openTopic} setOpenTopic={setOpenTopic} />
 
   return (
-    <div className="bg-slate-700 min-h-screen">
+    <div className="bg-slate-700 min-h-screen ">
       <header className="flex justify-evenly items-center bg-slate-900 ">
         <h2 className="px-4 py-10 text-3xl bg-slate-900 text-white">
           Hello, <strong>{user?.name}!</strong> 👋
@@ -75,7 +75,7 @@ export default function Home() {
               placeholder="Type a topic here"
             />
             <button className="btn-input-text">
-              <IoMdCreate size={22} />
+              <FaRegCaretSquareRight size={22} />
             </button>
           </div>
         </div>

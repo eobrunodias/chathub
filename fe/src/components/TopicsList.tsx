@@ -10,7 +10,7 @@ type TopicsListProps = {
   setOpenTopic: Dispatch<SetStateAction<Topic | null>>
 }
 
-export default function TopicsList({
+export function TopicsList({
   topics,
   setTopics,
   setOpenTopic,

@@ -1,7 +1,9 @@
-import { createContext, useState } from "react"
-import Home from "./components/Home"
-import Login from "./components/Login"
 import "./index.css"
+import { Home } from "./components/Home"
+import { Login } from "./components/Login"
+import { Footer } from "./components/Footer"
+import { createContext, useState } from "react"
+import { Header } from "./components/Header"
 
 export type User = {
   _id: string
@@ -35,12 +37,11 @@ export function App() {
 
   return (
     <div className="App">
-      <h1 className="text-4xl bg-primary p-4 text-white font-bold text-center">
-        ChatHub
-      </h1>
+      <Header />
       <UserContext.Provider value={{ user, login, logout }}>
         {user ? <Home /> : <Login />}
       </UserContext.Provider>
+      <Footer />
     </div>
   )
 }

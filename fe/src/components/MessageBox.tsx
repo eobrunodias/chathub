@@ -1,11 +1,11 @@
-import getTimeFrom from "../utils/get-time-from"
+import { getTimeFrom } from "../utils/get-time-from"
 import { Message } from "./TopicRoom"
 
 type MessageBoxProps = {
   message: Message
 }
 
-export default function MessageBox({ message }: MessageBoxProps) {
+export function MessageBox({ message }: MessageBoxProps) {
   return (
     <div className={message.author ? "message" : "system-message"}>
       <span>{message.author && `[${getTimeFrom(message.createdAt)}]`}</span>
