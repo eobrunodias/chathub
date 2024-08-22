@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+.input-text {
+  @apply py-1 px-2 outline-none border-white border-2 border-r-0 rounded-r-none rounded-[10px] w-80 input-placeholder;
+}
+
+.input-placeholder::placeholder {
+  @apply text-sm text-gray-400 italic;
+}
+
+.btn-input-text {
+  @apply py-1 px-4 border-2 border-primary font-bold bg-primary text-white rounded-l-none rounded-[10px];
+}
+
+.border-gradient {
+  border: 1px solid;
+  border-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0),
+      #979797,
+      rgba(0, 0, 0, 0)
+    )
+    1;
+}
