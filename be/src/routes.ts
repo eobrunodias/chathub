@@ -8,6 +8,17 @@ routes.get("/", async (_req: Request, res: Response) => {
   res.json({ message: "Hello World" })
 })
 
+// Temporary
+routes.get("/users", async (req: Request, res: Response) => {
+  try {
+    const users = await User.find({})
+    res.json({ users })
+  } catch (err) {
+    if (err instanceof Error)
+      return res.status(400).json({ message: err.message })
+  }
+})
+
 routes.post("/users", async (req: Request, res: Response) => {
   try {
     const { name } = req.body
